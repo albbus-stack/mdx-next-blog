@@ -29,7 +29,11 @@ const components = {
 
     return (
       <figure>
-        <img src={props.src} alt={props.alt} className={imgClass} />
+        <img
+          src={"/images/" + props.src}
+          alt={props.alt}
+          className={imgClass}
+        />
         <figcaption>{props.alt}</figcaption>
       </figure>
     );

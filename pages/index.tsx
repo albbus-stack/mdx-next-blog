@@ -21,7 +21,7 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
         <li className="mt-2">Markdown with MDX</li>
         <li className="mt-2">Tailwind CSS</li>
       </ul>
-      <div className="flex flex-row flex-wrap sm:gap-2 justify-between">
+      <div className="flex flex-row flex-wrap justify-between">
         {posts.map((post, i) => (
           <article
             key={post.slug}
@@ -57,7 +57,7 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
             {post.image !== undefined ? (
               <div className=" md:w-[90%] md:h-[90%] xl:w-[80%] xl:h-[80%] mx-auto pt-2 md:p-5 ">
                 <img
-                  src={post.image}
+                  src={"/images/" + post.image}
                   className="rounded-md min-w-[220px] md:min-w-[300px]"
                 />
               </div>

@@ -5,3 +5,5 @@ This is a simple blog built with NextJS, Typescript and MDX.
 ## Getting Started
 
 Change your website name, description, domain and main author in `/components/Head.tsx`.
+
+Provide a `/images/card-preview.png` as a preview image for your blog used in link cards.
