@@ -2,11 +2,12 @@ import NextHead from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import { MetaProps } from "../types/layout";
-
-export const WEBSITE_HOST_URL = "https://nextjs-typescript-mdx-blog.vercel.app";
-export const WEBSITE_MAIN_AUTHOR = "Your Name";
-const WEBSITE_NAME = "Your Blog Name";
-const WEBSITE_DESCRIPTION = "Your Blog Description";
+import {
+  WEBSITE_DESCRIPTION,
+  WEBSITE_HOST_URL,
+  WEBSITE_MAIN_AUTHOR,
+  WEBSITE_NAME,
+} from "../utils/config";
 
 interface HeadProps {
   customMeta?: MetaProps;

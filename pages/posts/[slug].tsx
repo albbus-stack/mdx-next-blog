@@ -18,7 +18,7 @@ import { PostType } from "../../types/post";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import { getAllPosts, PostItems } from "../../lib/api";
 import PostNavCard from "../../components/PostNavCard";
-import { WEBSITE_HOST_URL, WEBSITE_MAIN_AUTHOR } from "../../components/Head";
+import { WEBSITE_HOST_URL, WEBSITE_MAIN_AUTHOR } from "../../utils/config";
 
 const components = {
   Head,
