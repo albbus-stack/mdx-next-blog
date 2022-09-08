@@ -22,7 +22,9 @@ const Layout: React.FC<LayoutProps> = ({ children, customMeta }) => {
         </div>
       </header>
       <main>
-        <div className="max-w-[90vw] px-8 py-4 mx-auto">{children}</div>
+        <div className="max-w-[950px] w-[90vw] px-8 py-4 mx-auto">
+          {children}
+        </div>
       </main>
     </>
   );

@@ -51,20 +51,13 @@ main {
 }
 
 .prose img {
-  @apply mx-auto mb-2;
+  @apply mx-auto mb-2 min-w-[220px];
 }
 
 @media only screen and (min-width: 750px) {
   .prose img {
     max-width: 80% !important;
     max-height: 80% !important;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .prose img {
-    max-width: 65% !important;
-    max-height: 65% !important;
   }
 }
 
