@@ -46,6 +46,10 @@ main {
   transition: background-color 0.4s, color 0.2s;
 }
 
+main {
+  background-color: transparent;
+}
+
 .prose img {
   @apply mx-auto mb-2;
 }
