@@ -1,4 +1,5 @@
 const { spacing } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
@@ -6,6 +7,13 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        stone: colors.warmGray,
+        sky: colors.lightBlue,
+        neutral: colors.trueGray,
+        gray: colors.coolGray,
+        slate: colors.blueGray,
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
