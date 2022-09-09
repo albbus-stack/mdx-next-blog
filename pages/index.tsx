@@ -31,6 +31,11 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
               posts[i - 1 === -1 ? i : i - 1].image !== undefined
                 ? " md:w-[100%]"
                 : "") +
+              (posts[i + 1 === posts.length ? i : i + 1].image !== undefined &&
+              posts[i - 1 === -1 ? i : i - 1].image === undefined &&
+              posts[i - 2 === -1 ? i : i - 2].image === undefined
+                ? " md:w-[100%]"
+                : "") +
               " mt-10 flex lg:flex-row flex-col"
             }
           >
