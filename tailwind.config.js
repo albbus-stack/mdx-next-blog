@@ -3,15 +3,20 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  purge: {
+    content: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  },
   darkMode: "class",
   theme: {
     extend: {
       colors: {
+        light: "var(--color-light)",
+        dark: "var(--color-dark)",
+        fgLight: "var(--color-fg-light)",
+        fgDark: "var(--color-fg-dark)",
         stone: colors.warmGray,
-        sky: colors.lightBlue,
         neutral: colors.trueGray,
-        gray: colors.coolGray,
+        gray: colors.gray,
         slate: colors.blueGray,
       },
       typography: (theme) => ({

@@ -1,11 +1,23 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
+import fromTwColor from "../utils/fromTwColor";
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en" className="min-h-screen relative">
-        <Head />
-        <body className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white mb-[4rem]">
+        <Head>
+          <style>
+            :root{" "}
+            {`{--color-light: ${fromTwColor().bgLight}; --color-dark: ${
+              fromTwColor().bgDark
+            }; --color-fg-light: ${fromTwColor().fgLight}; --color-fg-dark: ${
+              fromTwColor().fgDark
+            }`}
+          </style>
+        </Head>
+        <body
+          className={`bg-light dark:bg-dark text-fgLight dark:text-fgDark mb-[4rem]`}
+        >
           <Main />
           <NextScript />
         </body>
@@ -13,7 +25,7 @@ class MyDocument extends Document {
           <div className="max-w-[90vw]">
             built by{" "}
             <a
-              className="text-gray-900 dark:text-white"
+              className="text-fgLight dark:text-fgDark"
               href="https://github.com/albbus-stack"
             >
               albbus-stack
