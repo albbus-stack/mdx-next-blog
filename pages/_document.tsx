@@ -7,12 +7,11 @@ class MyDocument extends Document {
       <Html lang="en" className="min-h-screen relative">
         <Head>
           <style>
-            :root{" "}
-            {`{--color-light: ${fromTwColor().bgLight}; --color-dark: ${
-              fromTwColor().bgDark
-            }; --color-fg-light: ${fromTwColor().fgLight}; --color-fg-dark: ${
-              fromTwColor().fgDark
-            }`}
+            :root
+            {`{--color-light: ${fromTwColor().bgLight}; 
+               --color-dark: ${fromTwColor().bgDark};
+               --color-fg-light: ${fromTwColor().fgLight}; 
+               --color-fg-dark: ${fromTwColor().fgDark}}`}
           </style>
         </Head>
         <body

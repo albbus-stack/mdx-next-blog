@@ -21,7 +21,7 @@ import { WEBSITE_HOST_URL, WEBSITE_MAIN_AUTHOR } from "../../utils/config";
 import remarkUnwrapImages from "remark-unwrap-images";
 
 const components = {
-  Image: Image,
+  Image,
   img: (props) => {
     const imgClass =
       (props.title.includes("round") ? "rounded-md" : "") +

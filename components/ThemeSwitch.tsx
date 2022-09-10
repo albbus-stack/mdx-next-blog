@@ -96,8 +96,7 @@ const ThemeSwitch: React.FC = () => {
           background: ${maskColor};
           transform: translate(${isDark ? "4px, -4px" : "0, 0"});
           opacity: ${isDark ? 0 : 1};
-          transition: transform 0.45s ease, background 0.45s ease,
-            opacity 0.1s ease;
+          transition: transform 0.45s ease, background 0.4s ease, opacity 0.2s;
         }
       `}</style>
     </button>
