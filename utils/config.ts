@@ -6,4 +6,4 @@ export const WEBSITE_DESCRIPTION = "Your Blog Description";
 export const BG_LIGHT = "blue-50";
 export const BG_DARK = "gray-900";
 export const FG_LIGHT = "black";
-export const FG_DARK = "slate-100";
+export const FG_DARK = "slate-50";

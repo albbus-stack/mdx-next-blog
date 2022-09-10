@@ -47,7 +47,7 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
               </p>
               <h1 className="mb-4 text-xl">
                 <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-                  <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
+                  <a className="text-fgLight dark:text-fgDark dark:hover:text-blue-400">
                     {post.title}
                   </a>
                 </Link>

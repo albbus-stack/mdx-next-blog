@@ -10,7 +10,7 @@ const PostNavCard: React.FC<PostNavCardProps> = ({ recentPost, direction }) => {
   return (
     <div className="bg-blue-100 dark:bg-gray-700 py-2 px-4 rounded-md">
       <Link href={recentPost["slug"]}>
-        <a className=" dark:text-white text-gray-900">
+        <a className="text-gray-900 dark:text-white">
           {direction === "forward" ? (
             <div className="inline-block rotate-180 translate-x-[-0.6rem] h-[111%]">
               &#10140; &nbsp;

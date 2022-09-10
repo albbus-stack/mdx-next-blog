@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import React from "react";
+import fromTwColor from "../utils/fromTwColor";
 
 /**
  * Based off of gatsby-theme-novela
@@ -17,8 +18,8 @@ const ThemeSwitch: React.FC = () => {
   }
 
   const isDark = theme === "dark";
-  const color = isDark ? "#fff" : "#000";
-  const maskColor = isDark ? "#000" : "#fff";
+  const color = isDark ? fromTwColor().bgLight : fromTwColor().bgDark;
+  const maskColor = isDark ? fromTwColor().bgDark : fromTwColor().bgLight;
   return (
     <button
       className="theme-button"
