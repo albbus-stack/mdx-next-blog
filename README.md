@@ -1,4 +1,4 @@
-# NextJS Mdx Blog
+# Mdx next blog
 
 This is a simple blog built with NextJS, Typescript and MDX.
 
