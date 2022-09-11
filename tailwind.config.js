@@ -14,6 +14,8 @@ module.exports = {
         dark: "var(--color-dark)",
         fgLight: "var(--color-fg-light)",
         fgDark: "var(--color-fg-dark)",
+        accentLight: "var(--color-accent-light)",
+        accentDark: "var(--color-accent-dark)",
         stone: colors.warmGray,
         neutral: colors.trueGray,
         gray: colors.gray,

@@ -11,7 +11,10 @@ class MyDocument extends Document {
             {`{--color-light: ${fromTwColor().bgLight}; 
                --color-dark: ${fromTwColor().bgDark};
                --color-fg-light: ${fromTwColor().fgLight}; 
-               --color-fg-dark: ${fromTwColor().fgDark}}`}
+               --color-fg-dark: ${fromTwColor().fgDark};
+               --color-accent-light: ${fromTwColor().accentLight};
+               --color-accent-dark: ${fromTwColor().accentDark};
+            }`}
           </style>
         </Head>
         <body
