@@ -40,3 +40,5 @@ Links can be specified with the following syntax:
 ```
 
 All the other [standard markdown elements](https://www.markdownguide.org/cheat-sheet/) like headings, lists, code blocks and tables are supported.
+
+For convenience you can use the [push-to-git.bat](push-to-git.bat) script to push the new posts and images to your git repository, after having configured the remote.
