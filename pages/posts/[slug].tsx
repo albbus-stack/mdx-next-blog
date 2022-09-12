@@ -5,7 +5,7 @@ import mdxPrism from "mdx-prism";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import Image from "next/image";
+import Image from "next/future/image";
 import Link from "next/link";
 import path from "path";
 import React from "react";
@@ -24,17 +24,24 @@ const components = {
   Image,
   img: (props) => {
     const imgClass =
+      "overflow-hidden mx-auto min-w[200px] " +
       (props.title.includes("round") ? "rounded-md" : "") +
-      (props.title.includes("small") ? " md:w-2/3 lg:w-1/2" : "");
+      (props.title.includes("small") ? " md:w-3/4" : "");
 
     return (
       <figure>
-        <img
-          src={"/images/" + props.src}
-          alt={props.alt}
-          className={imgClass}
-          loading="lazy"
-        />
+        <div className={imgClass}>
+          <Image
+            src={"/images/" + props.src}
+            alt={props.alt}
+            className={imgClass}
+            width="0"
+            height="0"
+            sizes="100vw"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </div>
+
         <figcaption>{props.alt}</figcaption>
       </figure>
     );

@@ -62,7 +62,7 @@ main {
 }
 
 .prose figure figcaption {
-  @apply text-center text-gray-600 dark:text-gray-400;
+  @apply text-center mt-0 text-gray-600 dark:text-gray-400;
 }
 
 /* Prism Styles */

@@ -1,6 +1,7 @@
 import { format, parseISO } from "date-fns";
 import { GetStaticProps } from "next";
 import Link from "next/link";
+import Image from "next/future/image";
 import React from "react";
 import Layout from "../components/Layout";
 import { getAllPosts } from "../lib/api";
@@ -36,7 +37,7 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
               posts[i - 2 === -1 ? i : i - 2].image === undefined
                 ? " md:w-[100%]"
                 : "") +
-              " mt-10 flex lg:flex-row flex-col"
+              " mt-10 flex items-center md:flex-row flex-col"
             }
           >
             <div>
@@ -60,11 +61,14 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
               </p>
             </div>
             {post.image !== undefined ? (
-              <div className=" md:w-[90%] md:h-[90%] xl:w-[80%] xl:h-[80%] mx-auto pt-2 md:p-5 ">
-                <img
+              <div className="md:w-[90%] md:h-[90%]  mx-auto pt-2 pl-10 lg:pr-4 xl:pl-0">
+                <Image
                   src={"/images/" + post.image}
                   className="rounded-md min-w-[220px] md:min-w-[300px]"
-                  loading="lazy"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
                 />
               </div>
             ) : (
