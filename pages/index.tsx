@@ -64,6 +64,7 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
                 <img
                   src={"/images/" + post.image}
                   className="rounded-md min-w-[220px] md:min-w-[300px]"
+                  loading="lazy"
                 />
               </div>
             ) : (

@@ -33,6 +33,7 @@ const components = {
           src={"/images/" + props.src}
           alt={props.alt}
           className={imgClass}
+          loading="lazy"
         />
         <figcaption>{props.alt}</figcaption>
       </figure>
