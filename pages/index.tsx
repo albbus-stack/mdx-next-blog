@@ -47,13 +47,12 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
                   format(parseISO(post.date), "MMMM dd, yyyy")}
               </p>
               <h1 className="mb-4 text-xl">
-                <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-                  <a
-                    className="text-fgLight dark:text-fgDark dark:hover:text-blue-400"
-                    onClick={() =>
-                      window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
-                  >
+                <Link
+                  as={`/posts/${post.slug}`}
+                  href={`/posts/[slug]`}
+                  scroll={false}
+                >
+                  <a className="text-fgLight dark:text-fgDark dark:hover:text-blue-400">
                     {post.title}
                   </a>
                 </Link>
@@ -61,7 +60,7 @@ export const Index: React.FC<IndexProps> = ({ posts }) => {
               <p className="mb-3 lg:mr-5 xl:mr-10">{post.description}</p>
             </div>
             {post.image !== undefined ? (
-              <div className="md:w-[90%] md:h-[90%]  mx-auto pt-2 pl-10 lg:pr-4 xl:pl-0">
+              <div className="md:w-[90%] md:h-[90%]  mx-auto pt-4 md:pl-10 lg:pr-4 xl:pl-0">
                 <Image
                   src={"/images/" + post.image}
                   className="rounded-md min-w-[220px] md:min-w-[300px]"

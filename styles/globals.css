@@ -47,6 +47,10 @@ main {
   transition: background-color 0.4s, color 0.2s;
 }
 
+header {
+  z-index: 1;
+}
+
 body {
   overflow-x: hidden;
 }

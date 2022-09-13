@@ -16,7 +16,15 @@ const MyApp = ({ Component, pageProps, router }) => {
           </div>
         </div>
       </header>
-      <AnimatePresence exitBeforeEnter initial={false}>
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() =>
+          setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 200)
+        }
+      >
         <Component {...pageProps} key={router.asPath} />
       </AnimatePresence>
     </ThemeProvider>

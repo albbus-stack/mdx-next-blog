@@ -47,10 +47,8 @@ const components = {
     );
   },
   a: (props) => (
-    <Link href={props.href}>
-      <a onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        {props.children}
-      </a>
+    <Link href={props.href} scroll={false}>
+      <a>{props.children}</a>
     </Link>
   ),
 };
