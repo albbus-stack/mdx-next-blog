@@ -44,7 +44,7 @@
 body,
 header,
 main {
-  transition: background-color 0.4s, color 0.2s;
+  transition: background-color 0.4s, color 0.2s, padding 0.5s;
 }
 
 header {
