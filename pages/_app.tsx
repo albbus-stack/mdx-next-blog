@@ -1,5 +1,5 @@
 import { ThemeProvider } from "next-themes";
-import React from "react";
+import React, { Suspense } from "react";
 import "../styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import NavBar from "../components/NavBar";
