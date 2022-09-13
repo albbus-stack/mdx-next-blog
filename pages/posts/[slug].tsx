@@ -24,7 +24,7 @@ const components = {
   Image,
   img: (props) => {
     const imgClass =
-      "overflow-hidden mx-auto min-w[200px] " +
+      "overflow-hidden mx-auto " +
       (props.title.includes("round") ? "rounded-md" : "") +
       (props.title.includes("small") ? " md:w-3/4" : "");
 

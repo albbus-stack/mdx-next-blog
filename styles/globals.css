@@ -60,7 +60,8 @@ main {
 }
 
 .prose img {
-  @apply mx-auto mb-2 min-w-[220px];
+  @apply mx-auto mb-3 min-w-[220px];
+  margin-top: 0 !important;
 }
 
 @media only screen and (min-width: 750px) {
