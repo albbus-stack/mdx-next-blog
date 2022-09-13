@@ -46,7 +46,13 @@ const components = {
       </figure>
     );
   },
-  a: (props) => <Link href={props.href}>{props.children}</Link>,
+  a: (props) => (
+    <Link href={props.href}>
+      <a onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        {props.children}
+      </a>
+    </Link>
+  ),
 };
 
 type PostPageProps = {

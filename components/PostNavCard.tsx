@@ -9,7 +9,10 @@ interface PostNavCardProps {
 const PostNavCard: React.FC<PostNavCardProps> = ({ recentPost, direction }) => {
   return (
     <Link href={recentPost["slug"]}>
-      <a className="text-fgLight dark:text-fgDark bg-accentLight dark:bg-accentDark py-[.6rem] px-4 rounded-md shadow-sm">
+      <a
+        className="text-fgLight dark:text-fgDark bg-accentLight dark:bg-accentDark py-[.6rem] px-4 rounded-md shadow-sm"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         {direction === "forward" ? (
           <div className="inline-block rotate-180 translate-x-[-0.6rem] h-[111%]">
             &#10140; &nbsp;
