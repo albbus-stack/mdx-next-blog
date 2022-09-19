@@ -24,13 +24,19 @@ const components = {
   Image,
   img: (props) => {
     const imgClass =
-      "overflow-hidden mx-auto " +
+      "overflow-hidden m-0 " +
       (props.title.includes("round") ? "rounded-md" : "") +
-      (props.title.includes("small") ? " md:w-3/4" : "");
+      (props.title.includes("small") ? " md:w-3/4" : "") +
+      (props.title.includes("side") ? "" : " mx-auto");
 
+    console.log(imgClass);
+
+    const captionClass =
+      (props.title.includes("side") ? "" : "mx-auto") +
+      (props.title.includes("small") ? " md:w-3/4" : "");
     return (
       <figure>
-        <div className={imgClass}>
+        <div>
           <Image
             src={"/images/" + props.src}
             alt={props.alt}
@@ -41,9 +47,8 @@ const components = {
             style={{ width: "100%", height: "auto" }}
             priority
           />
+          <figcaption className={captionClass}>{props.alt}</figcaption>
         </div>
-
-        <figcaption>{props.alt}</figcaption>
       </figure>
     );
   },

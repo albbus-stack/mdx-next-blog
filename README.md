@@ -27,10 +27,10 @@ The required fields are `title`, `description` and `date`. The `author` field is
 
 If you specify an image this will be displayed in the home page along with the post. The image should be placed in the `/public/images` directory.
 
-On markdown images you can specify the smaller size (`small`) or/and the rounded corners (`round`) with the following syntax:
+On markdown images you can specify the smaller size (`small`), the rounded corners (`round`) and/or the horizontal positioning (`side`) with the following syntax:
 
 ```md
-![alt text](/images/image.png "small round")
+![alt text](/images/image.png "small round side")
 ```
 
 Links can be specified with the following syntax:
