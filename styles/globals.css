@@ -59,6 +59,10 @@ main {
   background-color: transparent;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .prose img {
   @apply mb-3 min-w-[220px];
 }
