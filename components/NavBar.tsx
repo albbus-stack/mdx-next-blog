@@ -4,7 +4,7 @@ import ThemeSwitch from "./ThemeSwitch";
 
 const NavBar: React.FC = () => {
   return (
-    <header className="sticky top-0 bg-light dark:bg-dark border-b mb-8 border-fgLight dark:border-fgDark px-12 md:pl-16 lg:px-20 xl:px-28 mx-auto">
+    <header className="bg-light dark:bg-dark px-12 md:pl-16 lg:px-20 xl:px-28 mx-auto">
       <div className="flex items-center justify-between py-5 h-20">
         <nav>
           <Link href="/" scroll={false}>
