@@ -65,8 +65,8 @@ main {
 
 @media only screen and (min-width: 750px) {
   .prose img {
-    max-width: 80% !important;
-    max-height: 80% !important;
+    max-width: 87% !important;
+    max-height: 87% !important;
   }
 }
 
