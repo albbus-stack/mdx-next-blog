@@ -2,13 +2,12 @@ import { format, parseISO } from "date-fns";
 import fs from "fs";
 import matter from "gray-matter";
 import mdxPrism from "mdx-prism";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import Image from "next/future/image";
 import Link from "next/link";
 import path from "path";
-import React from "react";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import Layout from "../../components/Layout";
@@ -28,8 +27,6 @@ const components = {
       (props.title.includes("round") ? "rounded-md" : "") +
       (props.title.includes("small") ? " md:w-3/4" : " w-full") +
       (props.title.includes("side") ? "" : " mx-auto");
-
-    console.log(imgClass);
 
     const captionClass =
       (props.title.includes("side") ? "md:w-3/4" : "mx-auto") +
@@ -65,7 +62,7 @@ type PostPageProps = {
   recentPosts: PostItems;
 };
 
-const PostPage: React.FC<PostPageProps> = ({
+const PostPage: NextPage<PostPageProps> = ({
   source,
   frontMatter,
   recentPosts,

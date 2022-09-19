@@ -1,7 +1,7 @@
-import React from "react";
 import Layout from "../components/Layout";
+import { NextPage } from "next";
 
-export const PageNotFound = () => {
+export const PageNotFound: NextPage = () => {
   return (
     <Layout
       customMeta={{

@@ -1,8 +1,7 @@
 import { format, parseISO } from "date-fns";
-import { GetStaticProps } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Image from "next/future/image";
-import React from "react";
 import Layout from "../components/Layout";
 import { getAllPosts } from "../lib/api";
 import { PostType } from "../types/post";
@@ -12,7 +11,7 @@ type IndexProps = {
   posts: PostType[];
 };
 
-export const Index: React.FC<IndexProps> = ({ posts }) => {
+export const Index: NextPage<IndexProps> = ({ posts }) => {
   return (
     <Layout>
       <h1>Home Page</h1>
